@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">BeaconReference</string>
+    <string name="string_login">LOGIN</string>
+    <string name="string_password_small">password</string>
+    <string name="string_server_error_occurred">Server Error Occurred</string>
+
+</resources>

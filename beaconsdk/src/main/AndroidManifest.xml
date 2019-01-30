@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.altbeacon.beaconreference"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BeaconReferenceApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".RangingActivity"
+            android:label="@string/app_name" />
+        <!-- uncomment the following to enable scanning for over 30 minutes on Android 7+ -->
+        <service
+            android:name="org.altbeacon.beacon.service.BeaconService"
+            tools:node="replace">
+            <meta-data
+                android:name="longScanForcingEnabled"
+                android:value="true" />
+        </service>
+        <activity android:name="org.altbeacon.ui.LoginActivity"></activity>
+        <activity android:name="org.altbeacon.ui.ShowAllBeaconActivity"></activity>
+    </application>
+
+</manifest>
